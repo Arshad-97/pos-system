@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <title>Billing System</title>
+</head>
+
+<body>
+    <div class="container-fluid bg-2 text-center">
+        <div class="jumbotron">
+            <h1 class="border border-white" style="color: brown;">BILLING SYSTEM</h1>
+            <br>
+            <br>
+            <div style="display: flex;">
+                <div class="border border-white col-sm-10" style="flex: 70%;">
+                    <h4 class="display-5 text-left" style="color: darkred;">
+                        <span>Date: </span><span style="color: darkred;" id="date"> </span><span class="text-rigt" style="margin-left: 270px;">Bill No.<input type="text" id="billno" name="billno" placeholder="bill number"></span></h4>
+                    </table>
+                    <table class="table table-bordered" style="background-color: rgb(255, 255, 255);">
+                        <thead style="background-color: brown; color:rgb(255, 255, 255);">
+                            <tr>
+                                <th>Code</th>
+                                <th>Product Name</th>
+                                <th>Unit Price</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>
+                                <select class="form-control" id="pcode" name="pcode" onchange="myFunction()" required>
+                                <option value="pcodeop" ></option>
+                            </select>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="pname" name="pname" placeholder="Product Name" required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control" id="uprice" name="uprice" placeholder="Unit Price" required>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control" id="qty" name="qty" placeholder="Unit Price" required>
+                                <input type="hidden" class="form-control" id="subtotal" name="subtotal" placeholder="Subtotal" required>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Product Name</th>
+                                <th>Unit Price</th>
+                                <th>Quantity</th>
+                                <th>Sub Total</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bill-details"></tbody>
+                    </table>
+                </div>
+                <div class="col-sm-4 " style="flex:30%;">
+                    <div class="border border-white">
+                        <div class="form-group" style="text-align: left;">
+                            <label for="total"><b>Total</b></label>
+                            <input type="number" class="form-control" id="total" name="total" placeholder="Rs.0.00" required>
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label for="payamount"><b>Pay Amount</b></label>
+                            <input type="number" class="form-control" id="payamount" name="payamount" placeholder="Rs.0.00" required>
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label for="balance"><b>Balance</b></label>
+                            <input type="number" class="form-control" id="balance" name="balance" placeholder="Rs.0.00" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bill.js"></script>
+</body>
+
+</html>
